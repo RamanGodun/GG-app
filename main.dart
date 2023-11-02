@@ -4,7 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 // screens
-import '/splash_screen.dart';
+// import '/splash_screen.dart';
+import 'app_tabs.dart';
 
 //
 
@@ -31,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: AppTabs(bottomTab: 0),
     );
   }
 }

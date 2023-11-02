@@ -5,7 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 // screens
 // import '/splash_screen.dart';
-import 'app_tabs.dart';
+import 'screens/general/app_tabs.dart';
 
 //
 

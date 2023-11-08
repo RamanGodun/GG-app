@@ -6,6 +6,8 @@ import 'package:icon_animated/icon_animated.dart';
 class CustomAlertDialog extends StatefulWidget {
   final bool isConfirmation;
   final String? text;
+  final String? confirmButtonText;
+  final String? cancelButtonText;
   final Function()? onConfirm;
 
   const CustomAlertDialog({
@@ -13,6 +15,8 @@ class CustomAlertDialog extends StatefulWidget {
     required this.isConfirmation,
     this.text,
     this.onConfirm,
+    this.confirmButtonText = '',
+    this.cancelButtonText = '',
   }) : super(key: key);
 
   @override
@@ -92,9 +96,11 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
                           children: [
                             TextButton(
                               onPressed: widget.onConfirm,
-                              child: const Text(
-                                'Так',
-                                style: TextStyle(
+                              child: Text(
+                                widget.confirmButtonText!.isEmpty
+                                    ? 'Так'
+                                    : widget.confirmButtonText!,
+                                style: const TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 25,
                                     color: Colors.black),
@@ -104,9 +110,11 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
                               onPressed: () {
                                 Navigator.of(context).pop();
                               },
-                              child: const Text(
-                                'Ні',
-                                style: TextStyle(
+                              child: Text(
+                                widget.cancelButtonText!.isEmpty
+                                    ? 'Ні'
+                                    : widget.cancelButtonText!,
+                                style: const TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 25,
                                     color: Colors.black),

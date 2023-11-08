@@ -15,8 +15,8 @@ class CustomAlertDialog extends StatefulWidget {
     required this.isConfirmation,
     this.text,
     this.onConfirm,
-    this.confirmButtonText = '',
-    this.cancelButtonText = '',
+    this.confirmButtonText,
+    this.cancelButtonText,
   }) : super(key: key);
 
   @override
@@ -97,9 +97,7 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
                             TextButton(
                               onPressed: widget.onConfirm,
                               child: Text(
-                                widget.confirmButtonText!.isEmpty
-                                    ? 'Так'
-                                    : widget.confirmButtonText!,
+                                widget.confirmButtonText ?? 'Так',
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 25,
@@ -111,9 +109,7 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
                                 Navigator.of(context).pop();
                               },
                               child: Text(
-                                widget.cancelButtonText!.isEmpty
-                                    ? 'Ні'
-                                    : widget.cancelButtonText!,
+                                widget.cancelButtonText ?? 'Ні',
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 25,

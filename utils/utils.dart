@@ -21,6 +21,11 @@ class HelperMethods {
         MaterialPageRoute(builder: (context) => page), (route) => false);
   }
 
+  static void pushReplacement(BuildContext context, Widget page) {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => page));
+  }
+
   static void pop(BuildContext context) {
     Navigator.pop(context);
   }
@@ -39,5 +44,16 @@ class HelperMethods {
       );
     }
     return hasInternetConnection;
+  }
+
+  static Future<void> showCustomDialog({
+    required BuildContext context,
+    required Widget content,
+  }) async {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return content;
+        });
   }
 }

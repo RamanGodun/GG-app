@@ -40,14 +40,15 @@ class ThemeProvider extends ChangeNotifier {
 ThemeData _createDarkTheme() {
   return ThemeData.dark().copyWith(
     primaryColor: ColorsForApp.primary,
-    canvasColor: const Color(0xFF1B1B1B),
-    scaffoldBackgroundColor: const Color(0xFF1B1B1B),
-    hoverColor: const Color(0xFF525559),
-    focusColor: const Color(0xFFFFFFFF),
-    shadowColor: const Color(0xFF999A9B),
+    canvasColor: ColorsForApp.background,
+    scaffoldBackgroundColor: ColorsForApp.background,
+    hoverColor: AdditionalColorsForApp.hover,
+    focusColor: ColorsForApp.white,
+    shadowColor: AdditionalColorsForApp.silver,
     indicatorColor: AdditionalColorsForApp.amber1,
-    primaryColorLight: Colors.yellow.withOpacity(0.5),
-    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.grey),
+    primaryColorLight: AdditionalColorsForApp.amber1.withOpacity(0.5),
+    colorScheme: ColorScheme.fromSwatch()
+        .copyWith(secondary: AdditionalColorsForApp.grey),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       selectedItemColor: ColorsForApp.white,
       unselectedItemColor: AdditionalColorsForApp.hover,
@@ -55,7 +56,7 @@ ThemeData _createDarkTheme() {
     ),
     appBarTheme: const AppBarTheme(
       elevation: 0,
-      backgroundColor: Color(0xFF1B1B1B),
+      backgroundColor: ColorsForApp.background,
     ),
     textTheme: const TextTheme(
       bodyMedium: TextStyle(fontFamily: 'MA'),
@@ -68,19 +69,19 @@ ThemeData _createLightTheme() {
     primaryColor: ColorsForApp.primary,
     colorScheme: ColorScheme.fromSwatch()
         .copyWith(secondary: AdditionalColorsForApp.silver),
-    focusColor: Colors.black.withOpacity(0.5),
-    hoverColor: const Color.fromARGB(255, 224, 227, 207),
+    focusColor: ColorsForApp.black.withOpacity(0.5),
+    hoverColor: AdditionalColorsForApp.lighthover,
     indicatorColor: AdditionalColorsForApp.amber1,
-    canvasColor: const Color.fromARGB(255, 255, 255, 255),
-    scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
+    canvasColor: ColorsForApp.white,
+    scaffoldBackgroundColor: ColorsForApp.white,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      selectedItemColor: Colors.black,
-      unselectedItemColor: Color.fromARGB(255, 193, 193, 193),
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      selectedItemColor: ColorsForApp.black,
+      unselectedItemColor: AdditionalColorsForApp.bottomNavBarUnselectedLight,
+      backgroundColor: ColorsForApp.white,
     ),
     appBarTheme: const AppBarTheme(
-      color: Colors.white,
-      iconTheme: IconThemeData(color: Colors.black),
+      color: ColorsForApp.white,
+      iconTheme: IconThemeData(color: ColorsForApp.black),
       elevation: 0,
     ),
     textTheme: const TextTheme(bodyMedium: TextStyle(fontFamily: 'MA')),
@@ -91,7 +92,7 @@ class ColorsForApp {
   static const Color white = Color(0xFFD9D9D9);
   static const Color primary = Color(0xFFFFB100);
   static const Color background = Color(0xFF1B1B1B);
-  static const Color black = Color(0x00FFB100);
+  static const Color black = Colors.black;
 }
 
 class AdditionalColorsForApp {
@@ -102,9 +103,12 @@ class AdditionalColorsForApp {
   static const Color shadow = Color(0xFF999A9B);
   static const Color grey = Color(0xFF666666);
   static const Color hover = Color(0xFF525559);
+  static const Color lighthover = Color.fromARGB(255, 224, 227, 207);
   static const Color darkGrey1 = Color(0xFF3A3A3A);
   static const Color darkGrey2 = Color(0xFF454545);
   static const Color darkGrey3 = Color(0xFF343434);
+  static const Color bottomNavBarUnselectedLight =
+      Color.fromARGB(255, 193, 193, 193);
 
   static const Color amber1 = Colors.amber;
   static const Color yellow1 = Color.fromARGB(255, 227, 171, 79);

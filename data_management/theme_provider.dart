@@ -44,8 +44,7 @@ ThemeData _createDarkTheme() {
     hoverColor: const Color(0xFF525559),
     focusColor: const Color(0xFFFFFFFF),
     shadowColor: const Color(0xFF999A9B),
-    indicatorColor:
-        AdditionalColorsForApp.amber1, // Змінено на більш стильний колір
+    indicatorColor: AdditionalColorsForApp.amber1,
     primaryColorLight: Colors.yellow.withOpacity(0.5),
     colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.grey),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(

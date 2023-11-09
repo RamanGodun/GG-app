@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../data_management/switcher.dart';
+import '../../widgets/general/switcher.dart';
 import 'placeholder_screen.dart';
 
 class AppTabs extends StatefulWidget {

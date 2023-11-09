@@ -39,7 +39,7 @@ class ThemeProvider extends ChangeNotifier {
 
 ThemeData _createDarkTheme() {
   return ThemeData.dark().copyWith(
-    primaryColor: ColorsForApp.black,
+    primaryColor: ColorsForApp.primary,
     canvasColor: const Color(0xFF1B1B1B),
     scaffoldBackgroundColor: const Color(0xFF1B1B1B),
     hoverColor: const Color(0xFF525559),

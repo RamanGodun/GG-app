@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../widgets/general/switcher.dart';
 import 'placeholder_screen.dart';
 
 class AppTabs extends StatefulWidget {
@@ -37,10 +38,10 @@ class _AppTabsState extends State<AppTabs> with SingleTickerProviderStateMixin {
       length: 2,
       initialIndex: _appBarTabIndex ?? 0,
       child: Scaffold(
-        backgroundColor: const Color(0xFF1B1B1B),
+        backgroundColor: Theme.of(context).canvasColor,
         appBar: AppBar(
             toolbarHeight: 41,
-            backgroundColor: const Color(0xFF1B1B1B),
+            backgroundColor: Theme.of(context).canvasColor,
             automaticallyImplyLeading: false,
             // appBar leading
             leading: (_isAdmin && _bottomNavIndex != 2) ||
@@ -96,7 +97,11 @@ class _AppTabsState extends State<AppTabs> with SingleTickerProviderStateMixin {
                               }),
                         )
                       ]
-                    : null,
+                    : [
+                        const SizedBox(
+                          child: ThemeSwitcher(),
+                        )
+                      ],
             // bottom buttons
             bottom: (_isAdmin == true && _bottomNavIndex != 2 ||
                     _isAdmin == false && _bottomNavIndex == 1)
@@ -155,7 +160,7 @@ class _AppTabsState extends State<AppTabs> with SingleTickerProviderStateMixin {
         //
         // bottom navigation part next
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: const Color(0xFF000000).withOpacity(0.1),
+          backgroundColor: Theme.of(context).canvasColor,
           currentIndex: _bottomNavIndex,
           onTap: _onBottomNavTapped,
           showSelectedLabels: false,

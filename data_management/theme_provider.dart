@@ -50,13 +50,8 @@ ThemeData _createDarkTheme() {
     colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.grey),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       selectedItemColor: ColorsForApp.white,
-      selectedIconTheme: IconThemeData(color: ColorsForApp.white),
-      unselectedIconTheme: IconThemeData(color: AdditionalColorsForApp.hover),
-      unselectedLabelStyle: TextStyle(color: AdditionalColorsForApp.lightGrey),
-      selectedLabelStyle: TextStyle(color: ColorsForApp.white),
-      showUnselectedLabels: false,
+      unselectedItemColor: AdditionalColorsForApp.hover,
       backgroundColor: AdditionalColorsForApp.silver,
-      elevation: 0,
     ),
     appBarTheme: const AppBarTheme(
       elevation: 0,
@@ -79,12 +74,8 @@ ThemeData _createLightTheme() {
     canvasColor: const Color.fromARGB(255, 255, 255, 255),
     scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      selectedIconTheme: IconThemeData(color: Colors.black),
-      unselectedIconTheme:
-          IconThemeData(color: Color.fromARGB(255, 193, 193, 193)),
-      unselectedLabelStyle: TextStyle(color: AdditionalColorsForApp.lightGrey),
-      selectedLabelStyle: TextStyle(color: ColorsForApp.white),
-      showUnselectedLabels: false,
+      selectedItemColor: Colors.black,
+      unselectedItemColor: Color.fromARGB(255, 193, 193, 193),
       backgroundColor: Color.fromARGB(255, 255, 255, 255),
     ),
     appBarTheme: const AppBarTheme(

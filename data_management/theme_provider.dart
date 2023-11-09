@@ -72,16 +72,16 @@ ThemeData _createLightTheme() {
     focusColor: Colors.black.withOpacity(0.5),
     hoverColor: const Color.fromARGB(255, 224, 227, 207),
     indicatorColor: AdditionalColorsForApp.amber1,
-    canvasColor: ColorsForApp.white,
-    scaffoldBackgroundColor: Colors.white,
+    canvasColor: const Color.fromARGB(255, 255, 255, 255),
+    scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      selectedItemColor: AdditionalColorsForApp.yellow2,
-      unselectedIconTheme: IconThemeData(color: AdditionalColorsForApp.hover),
+      selectedIconTheme: IconThemeData(color: Colors.black),
+      unselectedIconTheme:
+          IconThemeData(color: Color.fromARGB(255, 193, 193, 193)),
       unselectedLabelStyle: TextStyle(color: AdditionalColorsForApp.lightGrey),
       selectedLabelStyle: TextStyle(color: ColorsForApp.white),
       showUnselectedLabels: false,
-      backgroundColor: AdditionalColorsForApp.silver,
-      elevation: 0,
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
     ),
     appBarTheme: const AppBarTheme(
       color: AdditionalColorsForApp.silver,

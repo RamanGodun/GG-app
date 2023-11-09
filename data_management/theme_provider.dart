@@ -41,11 +41,11 @@ ThemeData _createDarkTheme() {
   return ThemeData.dark().copyWith(
     primaryColor: ColorsForApp.black,
     canvasColor: const Color(0xFF1B1B1B),
+    scaffoldBackgroundColor: const Color(0xFF1B1B1B),
     hoverColor: const Color(0xFF525559),
     focusColor: const Color(0xFFFFFFFF),
     shadowColor: const Color(0xFF999A9B),
-    indicatorColor:
-        AdditionalColorsForApp.amber1, // Змінено на більш стильний колір
+    indicatorColor: AdditionalColorsForApp.amber1,
     primaryColorLight: Colors.yellow.withOpacity(0.5),
     colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.grey),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -73,6 +73,7 @@ ThemeData _createLightTheme() {
     hoverColor: const Color.fromARGB(255, 224, 227, 207),
     indicatorColor: AdditionalColorsForApp.amber1,
     canvasColor: ColorsForApp.white,
+    scaffoldBackgroundColor: Colors.white,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       selectedItemColor: AdditionalColorsForApp.yellow2,
       unselectedIconTheme: IconThemeData(color: AdditionalColorsForApp.hover),

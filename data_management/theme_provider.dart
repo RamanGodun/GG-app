@@ -58,6 +58,10 @@ ThemeData _createDarkTheme() {
       backgroundColor: AdditionalColorsForApp.silver,
       elevation: 0,
     ),
+    appBarTheme: const AppBarTheme(
+      elevation: 0,
+      backgroundColor: Color(0xFF1B1B1B),
+    ),
     textTheme: const TextTheme(
       bodyMedium: TextStyle(fontFamily: 'MA'),
     ),
@@ -84,7 +88,9 @@ ThemeData _createLightTheme() {
       backgroundColor: Color.fromARGB(255, 255, 255, 255),
     ),
     appBarTheme: const AppBarTheme(
-      color: AdditionalColorsForApp.silver,
+      color: Colors.white,
+      iconTheme: IconThemeData(color: Colors.black),
+      elevation: 0,
     ),
     textTheme: const TextTheme(bodyMedium: TextStyle(fontFamily: 'MA')),
   );

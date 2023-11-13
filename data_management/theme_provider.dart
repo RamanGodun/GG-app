@@ -70,9 +70,10 @@ ThemeData _createLightTheme() {
         unselectedItemColor: AdditionalColorsForApp.bottomNavBarUnselectedLight,
         backgroundColor: Color.fromARGB(255, 255, 255, 255)),
     appBarTheme: const AppBarTheme(
-        color: ColorsForApp.white,
-        iconTheme: IconThemeData(color: ColorsForApp.black),
-        elevation: 0),
+      color: ColorsForApp.white,
+      iconTheme: IconThemeData(color: ColorsForApp.black),
+      elevation: 0,
+    ),
     snackBarTheme: const SnackBarThemeData(
         backgroundColor: AdditionalColorsForApp.lightSnackBar,
         contentTextStyle:

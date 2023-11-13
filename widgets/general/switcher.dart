@@ -12,26 +12,16 @@ class ThemeSwitcher extends StatelessWidget {
 
     return Row(
       children: [
-        Icon(
-          Icons.nightlight_outlined,
-          size: 20,
-          color: Theme.of(context).focusColor,
-        ),
-        const SizedBox(width: 5),
         Switch(
           value: themeProvider.themeMode == ThemeMode.light,
           onChanged: (isLightMode) {
             final newMode = isLightMode ? ThemeMode.light : ThemeMode.dark;
             themeProvider.setThemeMode(newMode);
           },
-          inactiveThumbColor: Theme.of(context).hoverColor,
-          inactiveTrackColor: Theme.of(context).disabledColor,
-        ),
-        const SizedBox(width: 5),
-        Icon(
-          Icons.wb_sunny_outlined,
-          size: 20,
-          color: Theme.of(context).focusColor,
+          inactiveTrackColor: ColorsForApp.black,
+          activeColor: ColorsForApp.primary.withOpacity(0.3),
+          inactiveThumbImage: const AssetImage('assets/img/moon.png'),
+          activeThumbImage: const AssetImage('assets/img/sun.png'),
         ),
       ],
     );

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-// import '../widgets/custom/custom_snack_bar.dart';
+import '../widgets/custom/custom_snack_bar.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 class HelperMethods {
-  // static void showSnackBar(BuildContext context, String content) {
-  //   ScaffoldMessenger.of(context).showSnackBar(
-  //     CustomSnackBar(
-  //       context: context,
-  //       text: content,
-  //     ),
-  //   );
-  // }
+  static void showSnackBar(BuildContext context, String content) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      CustomSnackBar(
+        context: context,
+        text: content,
+      ),
+    );
+  }
 
   static void push(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));

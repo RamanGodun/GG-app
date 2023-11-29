@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class PlaceholderScreen extends StatelessWidget {
   final int number;
 
-  const PlaceholderScreen({required this.number, Key? key}) : super(key: key);
+  const PlaceholderScreen({required this.number, super.key});
 
   @override
   Widget build(BuildContext context) {

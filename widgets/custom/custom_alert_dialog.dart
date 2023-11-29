@@ -11,13 +11,13 @@ class CustomAlertDialog extends StatefulWidget {
   final Function()? onConfirm;
 
   const CustomAlertDialog({
-    Key? key,
+    super.key,
     required this.isConfirmation,
     this.text,
     this.onConfirm,
     this.confirmButtonText,
     this.cancelButtonText,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomAlertDialog> createState() => _CustomAlertDialogState();

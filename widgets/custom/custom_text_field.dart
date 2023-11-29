@@ -21,7 +21,7 @@ class CustomTextField extends StatelessWidget {
   final bool? allowEmpty;
 
   CustomTextField({
-    Key? key,
+    super.key,
     required this.maxLength,
     required this.controller,
     required this.validatorType,
@@ -35,8 +35,7 @@ class CustomTextField extends StatelessWidget {
     this.showHintText = true,
     this.isTextAlignCenter = false,
     this.allowEmpty,
-  })  : validator = _getValidatorFunction(validatorType, allowEmpty ?? false),
-        super(key: key);
+  }) : validator = _getValidatorFunction(validatorType, allowEmpty ?? false);
 
   static String? Function(String?)? _getValidatorFunction(
     ValidatorType type,

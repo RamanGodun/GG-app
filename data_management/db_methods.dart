@@ -36,7 +36,7 @@ class DBmethods {
         return dataList.map((data) => fromMapFunction(data)).toList();
       }
     } catch (error) {
-      print('Error in fetchDataFromFirestore: $error');
+      // print('Error in fetchDataFromFirestore: $error');
     }
     return null;
   }

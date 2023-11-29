@@ -7,10 +7,10 @@ class AppTabs extends StatefulWidget {
   final int? appBarIndex;
 
   const AppTabs({
-    Key? key,
+    super.key,
     required this.bottomTab,
     this.appBarIndex,
-  }) : super(key: key);
+  });
 
   @override
   State<AppTabs> createState() => _AppTabsState();
